@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast</title>
+</head>
+
+<body>
+
+  <main class="main__container">
+
+    <section class="main__sidebar">
+      <button id="search-btn" class="sidebar__search"><img class="sidebar__search-img"
+          src="public/icons/search-icon.svg" alt="search"></button>
+      <input id="input" class="sidebar__input" type="text" placeholder="Search city">
+      <img id="main-img" class="sidebar__img" src="public/images/sun-img.svg" alt="sun">
+      <div class="sidebar__info">
+        <div class="sidebar__info-city">
+          <img src="public/icons/location-icon.svg" alt="location">
+          <p id="city" class="sidebar__info-location">New York, USA</p>
+        </div>
+        <p id="temperature" class="sidebar__info-temp">24°C</p>
+        <!-- <p id="day" class="sidebar__info-day">Monday</p> -->
+        <!-- <p id="time">20:30 PM</p> -->
+        <p id="todays-data" class="sidebar__info-day">Monday, 20:30 PM</p>
+        <hr>
+      </div>
+      <h4>The Next Day Forecast</h4>
+      <div class="sidebar__forecast">
+        <button class="sidebar__button">2 days</button>
+        <button class="sidebar__button">7 days</button>
+        <button class="sidebar__button">15 days</button>
+      </div>
+
+      <div class="sidebar__nextday">
+        <div class="sidebar__nextday-item">
+          <img src="public/images/clouds-img.svg" alt="clouds">
+          <div class="sidebar__nextday-descr">
+            <p>Tuesday, June 14</p>
+            <p>Cloudy day</p>
+          </div>
+        </div>
+
+        <div class="sidebar__nextday-item">
+          <img src="public/images/clouds-img.svg" alt="clouds">
+          <div class="sidebar__nextday-descr">
+            <p>Tuesday, June 14</p>
+            <p>Cloudy day</p>
+          </div>
+        </div>
+        <div class="sidebar__nextday-item">
+          <img src="public/images/clouds-img.svg" alt="clouds">
+          <div class="sidebar__nextday-descr">
+            <p>Tuesday, June 14</p>
+            <p>Cloudy day</p>
+          </div>
+        </div>
+        <div class="sidebar__nextday-item">
+          <img src="public/images/clouds-img.svg" alt="clouds">
+          <div class="sidebar__nextday-descr">
+            <p>Tuesday, June 14</p>
+            <p>Cloudy day</p>
+          </div>
+        </div>
+        <!-- <div class="sidebar__nextday-item">
+          <img src="public/images/clouds-img.svg" alt="clouds">
+          <div class="sidebar__nextday-descr">
+            <p>Tuesday, June 14</p>
+            <p>Cloudy day</p>
+          </div>
+        </div> -->
+        <!-- <div class="sidebar__nextday-item">
+          <img src="public/images/clouds-img.svg" alt="clouds">
+          <div class="sidebar__nextday-descr">
+            <p>Tuesday, June 14</p>
+            <p>Cloudy day</p>
+          </div>
+        </div>  -->
+      </div>
+    </section>
+
+
+    <section class="additional__information">
+      <h2 id="weather-text" class="additional__title">Snow Thunderstorm</h2>
+      <div class="additional__hourly">
+        <!-- <div class="additional__hourly-item">
+          <p class="additional__hourly-hour">9:00</p>
+          <hr class="line">
+          <img class="additional__hourly-img" src="public/images/sun-behind-cloud-img.svg" alt="sun">
+          <p class="additional__hourly-temp">20°C</p>
+        </div>
+        <div class="additional__hourly-item">
+          <p class="additional__hourly-hour">10:00</p>
+          <hr class="line">
+          <img class="additional__hourly-img" src="public/images/sun-behind-cloud-img.svg" alt="sun">
+          <p class="additional__hourly-temp">20°C</p>
+        </div>
+        <div class="additional__hourly-item">
+          <p class="additional__hourly-hour">11:00</p>
+          <hr class="line">
+          <img class="additional__hourly-img" src="public/images/sun-behind-cloud-img.svg" alt="sun">
+          <p class="additional__hourly-temp">20°C</p>
+        </div>
+        <div class="additional__hourly-item">
+          <p class="additional__hourly-hour">12:00</p>
+          <hr class="line">
+          <img class="additional__hourly-img" src="public/images/sun-behind-cloud-img.svg" alt="sun">
+          <p class="additional__hourly-temp">20°C</p>
+        </div>
+        <div class="additional__hourly-item">
+          <p class="additional__hourly-hour">13:00</p>
+          <hr class="line">
+          <img class="additional__hourly-img" src="public/images/sun-behind-cloud-img.svg" alt="sun">
+          <p class="additional__hourly-temp">20°C</p>
+        </div>
+        <div class="additional__hourly-item">
+          <p class="additional__hourly-hour">14:00</p>
+          <hr class="line">
+          <img class="additional__hourly-img" src="public/images/sun-behind-cloud-img.svg" alt="sun">
+          <p class="additional__hourly-temp">20°C</p>
+        </div> -->
+      </div>
+
+
+
+      <div class="highlights">
+        <h2 class="highlights__title">Today's Highlights</h2>
+        <div class="highlights__wrapper">
+          <div class="highlights__wrapper-item">
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/uv-index-icon.svg" alt="uv index">
+              <p id="uv-index" class="highlights__wrapper-descr">UV Index - N / A</p>
+            </div>
+            <!-- <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/wind-icon.svg" alt="wind">
+              <p id="wind" class="highlights__wrapper-descr">Wind Speed - 7 Km/h</p>
+            </div> -->
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/sunrise-icon.svg" alt="sunrise">
+              <p id="sunrise" class="highlights__wrapper-descr">Sunrise - N / A</p>
+            </div>
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/sunset-icon.svg" alt="sunset">
+              <p id="sunset" class="highlights__wrapper-descr">Sunset - N / A</p>
+            </div>
+          </div>
+          <div class="highlights__wrapper-item">
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/humidity-icon.svg" alt="humidity">
+              <p id="humidity" class="highlights__wrapper-descr">Humidity - N / A</p>
+            </div>
+            <!-- <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/visibility-icon.svg" alt="visibility">
+              <p id="visibility" class="highlights__wrapper-descr">Visibility - 7 (Very light mist)</p>
+            </div> -->
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/wind-icon.svg" alt="wind">
+              <p id="wind" class="highlights__wrapper-descr">Wind Speed - N / A</p>
+            </div>
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/smog-icon.svg" alt="air quality">
+              <p id="air-quality" class="highlights__wrapper-descr">Air Quality - N / A</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

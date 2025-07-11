@@ -1,0 +1,34 @@
+@use './blocks/maincont.scss';
+@use './blocks/sidebar.scss';
+@use './blocks/additional.scss';
+@use './blocks/highlights.scss';
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    // overflow: hidden;
+}
+
+body {
+    font-family: sans-serif;
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
