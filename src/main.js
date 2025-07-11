@@ -2,7 +2,7 @@ import './scss/style.scss'; // Import main style file
 
 
 // Getting elements from document
-const apiKey = '97e2a1ce0f8c36f4bc8b1082223a9ba9';
+const apiKey = import.meta.env.VITE_API_KEY;
 const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const mainInput = document.getElementById('input');
 const searchButton = document.getElementById('search-btn');
