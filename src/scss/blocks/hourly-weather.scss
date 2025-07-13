@@ -11,17 +11,19 @@
     }
 
     &__title {
+        margin-top: 30px;
         font-size: 75px;
         font-weight: 700;
         line-height: 24px;
-        letter-spacing: 0%;
         text-align: left;
     }
 
     &__hourly {
         margin-top: 50px;
         display: flex;
+        flex-wrap: wrap;
         column-gap: 30px;
+        row-gap: 30px;
 
         &-item {
             // padding: 15px 0 15px 0;
@@ -56,4 +58,9 @@
 
 .line {
     width: 70%;
+}
+
+
+@media (max-width: 1024px) {
+    .additional {}
 }
