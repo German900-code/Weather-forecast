@@ -1,5 +1,6 @@
-import './scss/style.scss'; // Import main style file
+// import './scss/style.scss'; 
 
+import './scss/style.scss'; // Import main style file
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -184,7 +185,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const code = weatherCodes[i];
             const iconFile = weatherCodeIcons[code] || 'sun-img.svg';
-            const iconSrc = `/images/${iconFile}`;
+            const iconSrc = `./images/${iconFile}`;
             const iconAlt = `weather icon ${code}`;
 
             new HourlyWeather(
@@ -299,7 +300,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const code = sevenDays.weathercode[i];
             const icon = weatherCodeIcons[code] || 'sun-img.svg';
-            const iconPath = `public/images/${icon}`;
+            const iconPath = `./public/images/${icon}`;
 
             // const tempMaxRound = Math.round(Math.max(...tempMax));
             // const tempMinRound = Math.round(Math.min(...tempMin));
