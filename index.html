@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast</title>
+  <script type="module" crossorigin src="/Weather-forecast/assets/index-Du9_CW_y.js"></script>
+  <link rel="stylesheet" crossorigin href="/Weather-forecast/assets/index-BiXMrJvj.css">
+</head>
+
+<body>
+
+  <main class="main__container">
+
+    <section class="main__sidebar">
+      <button id="search-btn" class="sidebar__search"><img class="sidebar__search-img"
+          src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='70px'%20height='70px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M17.0392%2015.6244C18.2714%2014.084%2019.0082%2012.1301%2019.0082%2010.0041C19.0082%205.03127%2014.9769%201%2010.0041%201C5.03127%201%201%205.03127%201%2010.0041C1%2014.9769%205.03127%2019.0082%2010.0041%2019.0082C12.1301%2019.0082%2014.084%2018.2714%2015.6244%2017.0392L21.2921%2022.707C21.6828%2023.0977%2022.3163%2023.0977%2022.707%2022.707C23.0977%2022.3163%2023.0977%2021.6828%2022.707%2021.2921L17.0392%2015.6244ZM10.0041%2017.0173C6.1308%2017.0173%202.99087%2013.8774%202.99087%2010.0041C2.99087%206.1308%206.1308%202.99087%2010.0041%202.99087C13.8774%202.99087%2017.0173%206.1308%2017.0173%2010.0041C17.0173%2013.8774%2013.8774%2017.0173%2010.0041%2017.0173Z'%20fill='%23ffffff'/%3e%3c/g%3e%3c/svg%3e" alt="search"></button>
+      <input id="input" class="sidebar__input" type="text" placeholder="Search city">
+      <img id="main-img" class="sidebar__img" src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2036%2036'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20aria-hidden='true'%20role='img'%20class='iconify%20iconify--twemoji'%20preserveAspectRatio='xMidYMid%20meet'%3e%3cpath%20fill='%23FFAC33'%20d='M16%202s0-2%202-2s2%202%202%202v2s0%202-2%202s-2-2-2-2V2zm18%2014s2%200%202%202s-2%202-2%202h-2s-2%200-2-2s2-2%202-2h2zM4%2016s2%200%202%202s-2%202-2%202H2s-2%200-2-2s2-2%202-2h2zm5.121-8.707s1.414%201.414%200%202.828s-2.828%200-2.828%200L4.878%208.708s-1.414-1.414%200-2.829c1.415-1.414%202.829%200%202.829%200l1.414%201.414zm21%2021s1.414%201.414%200%202.828s-2.828%200-2.828%200l-1.414-1.414s-1.414-1.414%200-2.828s2.828%200%202.828%200l1.414%201.414zm-.413-18.172s-1.414%201.414-2.828%200s0-2.828%200-2.828l1.414-1.414s1.414-1.414%202.828%200s0%202.828%200%202.828l-1.414%201.414zm-21%2021s-1.414%201.414-2.828%200s0-2.828%200-2.828l1.414-1.414s1.414-1.414%202.828%200s0%202.828%200%202.828l-1.414%201.414zM16%2032s0-2%202-2s2%202%202%202v2s0%202-2%202s-2-2-2-2v-2z'%3e%3c/path%3e%3ccircle%20fill='%23FFAC33'%20cx='18'%20cy='18'%20r='10'%3e%3c/circle%3e%3c/svg%3e" alt="sun">
+      <div class="sidebar__info">
+        <div class="sidebar__info-city">
+          <img src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='71px'%20height='71px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M12.2848%2018.9935C12.1567%2019.0875%2012.0373%2019.1728%2011.9282%2019.2493C11.8118%2019.1721%2011.6827%2019.0833%2011.5427%2018.9832C10.8826%2018.5109%2010.0265%2017.8176%209.18338%2016.9529C7.45402%2015.1792%206%2012.9151%206%2010.5C6%207.18629%208.68629%204.5%2012%204.5C15.3137%204.5%2018%207.18629%2018%2010.5C18%2012.8892%2016.4819%2015.1468%2014.6893%2016.9393C13.8196%2017.8091%2012.9444%2018.5099%2012.2848%2018.9935ZM19.5%2010.5C19.5%2016.5%2012%2021%2012%2021C11.625%2021%204.5%2016.5%204.5%2010.5C4.5%206.35786%207.85786%203%2012%203C16.1421%203%2019.5%206.35786%2019.5%2010.5ZM13.5%2010.5C13.5%2011.3284%2012.8284%2012%2012%2012C11.1716%2012%2010.5%2011.3284%2010.5%2010.5C10.5%209.67157%2011.1716%209%2012%209C12.8284%209%2013.5%209.67157%2013.5%2010.5ZM15%2010.5C15%2012.1569%2013.6569%2013.5%2012%2013.5C10.3431%2013.5%209%2012.1569%209%2010.5C9%208.84315%2010.3431%207.5%2012%207.5C13.6569%207.5%2015%208.84315%2015%2010.5Z'%20fill='%23ffffff'/%3e%3c/g%3e%3c/svg%3e" alt="location">
+          <p id="city" class="sidebar__info-location">New York, USA</p>
+        </div>
+        <p id="temperature" class="sidebar__info-temp">24°C</p>
+        <!-- <p id="day" class="sidebar__info-day">Monday</p> -->
+        <!-- <p id="time">20:30 PM</p> -->
+        <p id="todays-data" class="sidebar__info-day">Monday, 20:30 PM</p>
+        <hr>
+      </div>
+      <h4>The Next Day Forecast</h4>
+      <div class="sidebar__forecast">
+        <button id="button2-days" class="sidebar__button">2 days</button>
+        <button id="button7-days" class="sidebar__button">7 days</button>
+      </div>
+
+      <div class="sidebar__nextday">
+
+      </div>
+    </section>
+
+
+    <section class="additional__information">
+      <h2 id="weather-text" class="additional__title">Snow Thunderstorm</h2>
+      <div class="additional__hourly">
+
+      </div>
+
+
+      <!-- <div class="highlights">
+        <h2 class="highlights__title">Today's Highlights</h2>
+        <div class="highlights__wrapper">
+          <div class="highlights__wrapper-item">
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/uv-index-icon.svg" alt="uv index">
+              <p id="uv-index" class="highlights__wrapper-descr">UV Index - N / A</p>
+            </div>
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/sunrise-icon.svg" alt="sunrise">
+              <p id="sunrise" class="highlights__wrapper-descr">Sunrise - N / A</p>
+            </div>
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/sunset-icon.svg" alt="sunset">
+              <p id="sunset" class="highlights__wrapper-descr">Sunset - N / A</p>
+            </div>
+          </div>
+          <div class="highlights__wrapper-item">
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/humidity-icon.svg" alt="humidity">
+              <p id="humidity" class="highlights__wrapper-descr">Humidity - N / A</p>
+            </div>
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/wind-icon.svg" alt="wind">
+              <p id="wind" class="highlights__wrapper-descr">Wind Speed - N / A</p>
+            </div>
+            <div class="highlights__wrapper-block">
+              <img class="highlights__wrapper-icon" src="public/icons/smog-icon.svg" alt="air quality">
+              <p id="air-quality" class="highlights__wrapper-descr">Air Quality - N / A</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </section>
+
+
+    <section class="highlights">
+      <h2 class="highlights__title">Today's Highlights</h2>
+      <div class="highlights__wrapper">
+        <div class="highlights__wrapper-item">
+          <div class="highlights__wrapper-block">
+            <img class="highlights__wrapper-icon" src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20fill='%23ffffff'%20width='800px'%20height='800px'%20viewBox='0%200%2032%2032'%20id='Layer_1'%20data-name='Layer%201'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cdefs%3e%3cstyle%3e%20.cls-1%20{%20fill:%20none;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20d='M13,30H9a2.0027,2.0027,0,0,1-2-2V20H9v8h4V20h2v8A2.0027,2.0027,0,0,1,13,30Z'%20transform='translate(0%200)'/%3e%3cpolygon%20points='25%2020%2023.25%2020%2021%2029.031%2018.792%2020%2017%2020%2019.5%2030%2022.5%2030%2025%2020'/%3e%3crect%20x='15'%20y='2'%20width='2'%20height='5'/%3e%3crect%20x='21.6675'%20y='6.8536'%20width='4.958'%20height='1.9998'%20transform='translate(1.5191%2019.3744)%20rotate(-45)'/%3e%3crect%20x='25'%20y='15'%20width='5'%20height='2'/%3e%3crect%20x='2'%20y='15'%20width='5'%20height='2'/%3e%3crect%20x='6.8536'%20y='5.3745'%20width='1.9998'%20height='4.958'%20transform='translate(-3.253%207.8535)%20rotate(-45)'/%3e%3cpath%20d='M22,17H20V16a4,4,0,0,0-8,0v1H10V16a6,6,0,0,1,12,0Z'%20transform='translate(0%200)'/%3e%3crect%20id='_Transparent_Rectangle_'%20data-name='&lt;Transparent%20Rectangle&gt;'%20class='cls-1'%20width='32'%20height='32'/%3e%3c/g%3e%3c/svg%3e" alt="uv index">
+            <p id="uv-index" class="highlights__wrapper-descr">UV Index - N / A</p>
+          </div>
+          <div class="highlights__wrapper-block">
+            <img class="highlights__wrapper-icon" src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M8%2018C8%2015.7909%209.79086%2014%2012%2014C14.2091%2014%2016%2015.7909%2016%2018'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='21'%20y1='21'%20x2='3'%20y2='21'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='12'%20y1='11'%20x2='12'%20y2='9'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%203L12%2011'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%203L9%205.5'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%203L15%205.5'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='5'%20y1='18'%20x2='3'%20y2='18'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='21'%20y1='18'%20x2='19'%20y2='18'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='19.071'%20y1='11.3432'%20x2='17.6568'%20y2='12.7574'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cline%20x1='5.41421'%20y1='12'%20x2='6.82843'%20y2='13.4142'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3c/svg%3e" alt="sunrise">
+            <p id="sunrise" class="highlights__wrapper-descr">Sunrise - N / A</p>
+          </div>
+          <div class="highlights__wrapper-block">
+            <img class="highlights__wrapper-icon" src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M6%2012L5%2011M18%2012L19%2011M3%2018H21M5%2021H19M7%2018C7%2015.2386%209.23858%2013%2012%2013C14.7614%2013%2017%2015.2386%2017%2018M12%203V10M12%2010L15%207M12%2010L9%207'%20stroke='%23ffffff'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3c/svg%3e" alt="sunset">
+            <p id="sunset" class="highlights__wrapper-descr">Sunset - N / A</p>
+          </div>
+        </div>
+        <div class="highlights__wrapper-item">
+          <div class="highlights__wrapper-block">
+            <img class="highlights__wrapper-icon" src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M12%2021.5C16.1012%2021.5%2019.5%2018.4372%2019.5%2014.5714C19.5%2012.1555%2018.2672%209.71249%2016.8732%207.70906C15.4698%205.69214%2013.8515%204.04821%2012.9778%203.21778C12.4263%202.69364%2011.5737%202.69364%2011.0222%203.21779C10.1485%204.04821%208.53016%205.69214%207.1268%207.70906C5.73282%209.71249%204.5%2012.1555%204.5%2014.5714C4.5%2018.4372%207.8988%2021.5%2012%2021.5Z'%20stroke='%23ffffff'/%3e%3cpath%20d='M12%2018C11.4747%2018%2010.9546%2017.8965%2010.4693%2017.6955C9.98396%2017.4945%209.54301%2017.1999%209.17157%2016.8284C8.80014%2016.457%208.5055%2016.016%208.30448%2015.5307C8.10346%2015.0454%208%2014.5253%208%2014'%20stroke='%23ffffff'%20stroke-linecap='round'/%3e%3c/g%3e%3c/svg%3e" alt="humidity">
+            <p id="humidity" class="highlights__wrapper-descr">Humidity - N / A</p>
+          </div>
+          <div class="highlights__wrapper-block">
+            <img class="highlights__wrapper-icon" src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M6.25%205.5C6.25%203.70508%207.70507%202.25%209.5%202.25C11.2949%202.25%2012.75%203.70507%2012.75%205.5C12.75%207.29493%2011.2949%208.75%209.5%208.75H3C2.58579%208.75%202.25%208.41421%202.25%208C2.25%207.58579%202.58579%207.25%203%207.25H9.5C10.4665%207.25%2011.25%206.4665%2011.25%205.5C11.25%204.5335%2010.4665%203.75%209.5%203.75C8.5335%203.75%207.75%204.5335%207.75%205.5V5.85714C7.75%206.27136%207.41421%206.60714%207%206.60714C6.58579%206.60714%206.25%206.27136%206.25%205.85714V5.5ZM14.25%207.5C14.25%205.15279%2016.1528%203.25%2018.5%203.25C20.8472%203.25%2022.75%205.15279%2022.75%207.5C22.75%209.84721%2020.8472%2011.75%2018.5%2011.75H2C1.58579%2011.75%201.25%2011.4142%201.25%2011C1.25%2010.5858%201.58579%2010.25%202%2010.25H18.5C20.0188%2010.25%2021.25%209.01878%2021.25%207.5C21.25%205.98122%2020.0188%204.75%2018.5%204.75C16.9812%204.75%2015.75%205.98122%2015.75%207.5V8C15.75%208.41421%2015.4142%208.75%2015%208.75C14.5858%208.75%2014.25%208.41421%2014.25%208V7.5ZM3.25%2014C3.25%2013.5858%203.58579%2013.25%204%2013.25H18.5C20.8472%2013.25%2022.75%2015.1528%2022.75%2017.5C22.75%2019.8472%2020.8472%2021.75%2018.5%2021.75C16.1528%2021.75%2014.25%2019.8472%2014.25%2017.5V17C14.25%2016.5858%2014.5858%2016.25%2015%2016.25C15.4142%2016.25%2015.75%2016.5858%2015.75%2017V17.5C15.75%2019.0188%2016.9812%2020.25%2018.5%2020.25C20.0188%2020.25%2021.25%2019.0188%2021.25%2017.5C21.25%2015.9812%2020.0188%2014.75%2018.5%2014.75H4C3.58579%2014.75%203.25%2014.4142%203.25%2014Z'%20fill='%23ffffff'/%3e%3c/g%3e%3c/svg%3e" alt="wind">
+            <p id="wind" class="highlights__wrapper-descr">Wind Speed - N / A</p>
+          </div>
+          <div class="highlights__wrapper-block">
+            <img class="highlights__wrapper-icon" src="data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20fill='%23ffffff'%20width='800px'%20height='800px'%20viewBox='0%20-64%20640%20640'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20d='M624%20368H80c-8.8%200-16%207.2-16%2016v16c0%208.8%207.2%2016%2016%2016h544c8.8%200%2016-7.2%2016-16v-16c0-8.8-7.2-16-16-16zm-480%2096H16c-8.8%200-16%207.2-16%2016v16c0%208.8%207.2%2016%2016%2016h128c8.8%200%2016-7.2%2016-16v-16c0-8.8-7.2-16-16-16zm416%200H224c-8.8%200-16%207.2-16%2016v16c0%208.8%207.2%2016%2016%2016h336c8.8%200%2016-7.2%2016-16v-16c0-8.8-7.2-16-16-16zM144%20288h156.1c22.5%2019.7%2051.6%2032%2083.9%2032s61.3-12.3%2083.9-32H528c61.9%200%20112-50.1%20112-112S589.9%2064%20528%2064c-18%200-34.7%204.6-49.7%2012.1C454%2031%20406.8%200%20352%200c-41%200-77.8%2017.3-104%2044.8C221.8%2017.3%20185%200%20144%200%2064.5%200%200%2064.5%200%20144s64.5%20144%20144%20144z'/%3e%3c/g%3e%3c/svg%3e" alt="air quality">
+            <p id="air-quality" class="highlights__wrapper-descr">Air Quality - N / A</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
