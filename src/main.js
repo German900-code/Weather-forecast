@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
         humidity.textContent = `Humidity - ${weatherData.main.humidity}%`;
         weatherTitle.textContent = `${capitalizeEachWord(weatherData.weather[0].description)}`;
 
-        mainImg.src = `./public/images/${getMainWeatherIcon(data.weather[0].main)}`;
+        mainImg.src = `/Weather-forecast/public/images/${getMainWeatherIcon(data.weather[0].main)}`;
     }
 
 
@@ -185,7 +185,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const code = weatherCodes[i];
             const iconFile = weatherCodeIcons[code] || 'sun-img.svg';
-            const iconSrc = `./images/${iconFile}`;
+            const iconSrc = `/Weather-forecast/images/${iconFile}`;
             const iconAlt = `weather icon ${code}`;
 
             new HourlyWeather(
@@ -206,7 +206,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     async function fetchAirQuality(lat, lon) {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`);
         let data = await response.json();
         let airQualityData = data;
         console.log(airQualityData);
@@ -300,7 +300,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const code = sevenDays.weathercode[i];
             const icon = weatherCodeIcons[code] || 'sun-img.svg';
-            const iconPath = `./public/images/${icon}`;
+            const iconPath = `/Weather-forecast/public/images/${icon}`;
 
             // const tempMaxRound = Math.round(Math.max(...tempMax));
             // const tempMinRound = Math.round(Math.min(...tempMin));
