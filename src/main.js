@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
         humidity.textContent = `Humidity - ${weatherData.main.humidity}%`;
         weatherTitle.textContent = `${capitalizeEachWord(weatherData.weather[0].description)}`;
 
-        mainImg.src = `public/images/${getMainWeatherIcon(data.weather[0].main)}`;
+        mainImg.src = `./public/images/${getMainWeatherIcon(data.weather[0].main)}`;
     }
 
 
