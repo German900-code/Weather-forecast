@@ -6,7 +6,8 @@
         display: flex;
         flex-direction: column;
         // align-items: center;
-        height: 450px;
+        // height: 450px;
+        height: auto;
 
     }
 
@@ -14,7 +15,6 @@
         margin-top: 30px;
         font-size: 75px;
         font-weight: 700;
-        line-height: 24px;
         text-align: left;
     }
 
@@ -28,7 +28,8 @@
         &-item {
             // padding: 15px 0 15px 0;
             text-align: center;
-            width: 160px;
+            // width: 160px;
+            width: 20%;
             height: auto;
             border-radius: 35px;
             box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
@@ -62,5 +63,82 @@
 
 
 @media (max-width: 1024px) {
-    .additional {}
+    .additional {
+        &__title {
+            font-size: 53px;
+        }
+
+        &__hourly {
+            margin-top: 20px;
+            justify-content: space-evenly;
+        }
+
+        &__information {
+            // flex-wrap: wrap;
+        }
+    }
 }
+
+@media (max-width: 768px) {
+    .additional {
+        grid-row: 2 / 3;
+
+        &__hourly {}
+    }
+}
+
+@media (max-width: 480px) {
+    .additional {
+        grid-row: 3 / 4;
+        // grid-row: 3 / 4;
+
+        &__title {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 45px;
+        }
+
+        &__information {
+            // grid-row: 4 / 5;
+            // grid-row: 3 / 4;
+            grid-column: 1;
+        }
+
+        &__hourly {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &-item {
+                width: 100%;
+            }
+
+            &-temp {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .additional {
+        &__hourly {
+            grid-row: 2 / 3;
+
+            &-item {
+                width: 100%;
+            }
+        }
+
+
+    }
+}
+
+// @media (max-width: 375px) {
+//     .additional {
+//         &__hourly {
+//             justify-content: center;
+//             align-items: center;
+//         }
+//     }
+// }
