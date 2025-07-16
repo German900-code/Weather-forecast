@@ -1,5 +1,3 @@
-// import './scss/style.scss'; 
-
 import './scss/style.scss'; // Import main style file
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -22,7 +20,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let todayData = document.getElementById('todays-data');
     const buttonTwoDays = document.getElementById('button2-days');
     const buttonSevenDays = document.getElementById('button7-days');
-    // const buttonsForDays = document.querySelectorAll('sidebar__button');
     let weatherData;
 
 
@@ -79,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
         humidity.textContent = `Humidity - ${weatherData.main.humidity}%`;
         weatherTitle.textContent = `${capitalizeEachWord(weatherData.weather[0].description)}`;
 
-        mainImg.src = `/Weather-forecast/public/images/${getMainWeatherIcon(data.weather[0].main)}`;
+        mainImg.src = `/Weather-forecast/images/${getMainWeatherIcon(data.weather[0].main)}`;
     }
 
 
@@ -200,8 +197,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
 
-
-        // console.log(weatherHourlyData.hourly);
     }
 
 
@@ -209,7 +204,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`);
         let data = await response.json();
         let airQualityData = data;
-        console.log(airQualityData);
+        // console.log(airQualityData);
         const aqi = data.list[0].main.aqi;
         const aqiMeaning = {
             1: 'Good',
@@ -219,13 +214,11 @@ window.addEventListener('DOMContentLoaded', () => {
             5: 'Very poor'
         };
 
-
         airQuality.textContent = `Air Quality - ${aqi} (${aqiMeaning[aqi]})`;
     }
 
 
     async function fetchUVindex(lat, lon) {
-        // const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=uv_index`);
         const url = `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${apiKey}`;
         const response = await fetch(url);
         let data = await response.json();
@@ -245,7 +238,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 break;
             }
         }
-        // console.log(data.current.uv_index);
         uvIndex.textContent = `UV Index - ${Math.round(data.value)} (${category})`;
     }
 
@@ -257,16 +249,10 @@ window.addEventListener('DOMContentLoaded', () => {
         const data = await response.json();
         const sevenDays = data.daily;
         const forecastForWeek = document.querySelector('.sidebar__nextday');
-        // console.log('Данные из запроса', data);
-        // console.log('Прогноз на 7 дней', sevenDays);
-        // const tempMax = sevenDays.temperature_2m_max;
-        // const tempMin = sevenDays.temperature_2m_min;
 
-
-
-        console.log(`Получаем прогноз на ${days} дней`);
-        console.log('Координаты:', lat, lon);
-        console.log('Ответ от OpenMeteo API:', data);
+        // console.log(`Получаем прогноз на ${days} дней`);
+        // console.log('Координаты:', lat, lon);
+        // console.log('Ответ от OpenMeteo API:', data);
 
         if (!sevenDays || !sevenDays.time) {
             console.warn('Нет данных о днях');
@@ -277,18 +263,8 @@ window.addEventListener('DOMContentLoaded', () => {
             console.log('Ошибка, элемент не найден');
             return;
         }
-        // console.log('Max temperature: ', tempMaxRound);
-        // console.log('Min temperature: ', tempMinRound);
 
         forecastForWeek.innerHTML = '';
-
-
-        // console.log('Данные от Open-Meteo:', data);
-        // console.log('daily:', data.daily);
-        // console.log('time:', data.daily.time);
-
-
-
 
         for (let i = 0; i < days; i++) {
             const dateStr = new Date(sevenDays.time[i]);
@@ -300,17 +276,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const code = sevenDays.weathercode[i];
             const icon = weatherCodeIcons[code] || 'sun-img.svg';
-            const iconPath = `/Weather-forecast/public/images/${icon}`;
-
-            // const tempMaxRound = Math.round(Math.max(...tempMax));
-            // const tempMinRound = Math.round(Math.min(...tempMin));
+            const iconPath = `/Weather-forecast/images/${icon}`;
 
             const max = Math.round(sevenDays.temperature_2m_max[i]);
             const min = Math.round(sevenDays.temperature_2m_min[i]);
 
-
-
-            // console.log(`День ${i + 1}:`, formattedDate, min, max, iconPath);
 
             const element = document.createElement('div');
             element.className = 'sidebar__nextday-item';
